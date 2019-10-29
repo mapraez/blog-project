@@ -1,3 +1,9 @@
+This is the repository for the first app in the Rails course on Udemy
+
+
+
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
