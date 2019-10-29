@@ -1,5 +1,5 @@
 This is the repository for the first app in the Rails course on Udemy
-
+https://marco-blog-project.herokuapp.com/
 
 
 
