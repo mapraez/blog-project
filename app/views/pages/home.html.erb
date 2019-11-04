@@ -1,35 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TestTitle</title>
-  <style>
-    header {
-      text-align: center;
-      background-color: #666;
-      padding: 30px;
-      font-size: 35px;
-      color: blue;
-    }
-    footer {
-      text-align: center;
-      background-color: #777;
-      padding: 10px;
-    }
-  </style>
-  <meta name="author" content="Marco Apraez">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
-<header>
-<h1>This is the Home Page</h1>
-</header>
 
+  <div class="center jumbotron">
+    <h1>Blog Project</h1>
+    <%= link_to "Sign up now", "#", class: "btn btn-danger btn-xlarge" %>
+  </div>
 
-
-<footer>
-<%= link_to 'Blog Project', articles_path %> | <%= link_to 'About page', about_path %>
-</footer>
 
 </body>
 </html>

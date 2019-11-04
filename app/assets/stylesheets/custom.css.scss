@@ -1,3 +1,62 @@
 .navbar {
-  background-color: blue;
+  background-color: black;
+}
+
+body {
+  padding-top: 70px;
+}
+
+#logo {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url('supper.jpg');
+  background-size: cover;
+  height: 700px;
+  width: auto;
+}
+
+.jumbotron h1{
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+
+.btn-xlarge {
+  font-size: 1.7em;
+  background-color: black;
+}
+
+footer {
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+}
+
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin-left: 15px;
 }
