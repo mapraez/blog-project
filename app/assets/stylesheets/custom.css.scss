@@ -53,11 +53,15 @@ footer a:hover {
 }
 
 footer small {
+  float: left;
 }
 
 footer ul {
-  display: flex;
-  justify-content: flex-end;
+  float: right;
   list-style: none;
   margin-left: 15px;
+}
+
+.form-con {
+  margin-top: 10px;
 }
