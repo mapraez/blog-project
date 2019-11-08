@@ -1,0 +1,14 @@
+<h1 align="center">All Bloggers</h1>
+<!-- <div class="center"> -->
+  <% @users.each do |user| %>
+    <ul class="listing center bg-light">
+      <div class="col-md-4 offset-md-4">
+        <li><%= link_to gravatar_for(user), user_path(user) %></li>
+        <li class="article-title">
+          <%= link_to user.username, user_path(user) %>
+        </li>
+        <li><small><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
+      </div>
+    </ul>
+  <% end %>
+<!-- </div> -->

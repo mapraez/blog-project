@@ -7,4 +7,6 @@
 <div class="container">
   <h4 align="center"><%= @user.username %>'s articles</h4>
 </div>
+<div class="container">
 <%= render 'articles/article', obj: @user.articles %>
+</div>
