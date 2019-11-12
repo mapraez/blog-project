@@ -3,7 +3,7 @@
     <div class="row bg-light">
       <div class="col-xs-8 offset-xs-2">
         <!-- <div class="well well-lg"> -->
-          
+
           <div class="article-title">
             <%= link_to article.title, article_path(article) %>
           </div>
@@ -15,7 +15,7 @@
                         last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
             </div>
           </div>
-          <% if logged_in? && current_user == article.user %>
+          <% if logged_in? && (current_user == article.user || current_user.admin?) %>
             <div class="article-actions">
               <%= link_to 'Edit this article', edit_article_path(article), class: "btn btn-xs btn-primary" %>
               <%= link_to 'Delete this article', articles_path(article), method: :delete,
