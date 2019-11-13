@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :show]
   before_action :require_same_user, only: [:edit, :update]
   before_action :require_admin, only: [:destroy]
+
   def index
     @users = User.paginate(page: params[:page], per_page: 3)
   end
@@ -13,7 +14,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      session[:user_id] = (user_params)
+      session[:user_id] = (@user.id)
       flash[:success] = "Welcome to the Blog Project #{@user.username}"
       redirect_to users_path(@user)
     else
@@ -40,7 +41,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    flash[:danger] = "User and all articles created by user ahve been deleted"
+    flash[:danger] = "User and all articles created by user have been deleted"
     redirect_to users_path
   end
 
