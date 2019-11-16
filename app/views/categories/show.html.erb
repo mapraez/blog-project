@@ -1,9 +1,14 @@
 <h1 align="center"><%= "Category: " + @category.name %> </h1>
 <div class="d-flex justify-content-center">
-  <!-- <div align="center"> -->
+  <div align="center">
+    <!-- <div class="row"> -->
+    <% if logged_in? && current_user.admin? %>
+      <span class="badge"><%= link_to "Edit Category Name", edit_category_path(@category) %></span>
+    <% end %>
+    <!-- </div> -->
     <%= will_paginate @category_articles %>
-  <!-- </div> -->
-</div>
+  </div>
+  </div>
 <%= render 'articles/article', obj: @category_articles %>
 <div class="d-flex justify-content-center">
   <!-- <div align="center"> -->
